@@ -6,14 +6,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class PizzaListAdapter extends RecyclerView.Adapter<PizzaViewHolder>
-{
+public class PizzaListAdapter extends RecyclerView.Adapter<PizzaViewHolder> {
     private String pizzaDetails[]= {"Pizza_one","Pizza_two","Pizza_three"};
 
     @Override
     public  PizzaViewHolder onCreateViewHolder(ViewGroup viewGroup,int viewType){
-        LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
-        View listItem = layoutInflater.inflate(R.layout.list,viewGroup, false);
+        LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext())
+                View listItem = layoutInflater.inflate(R.layout.list,viewGroup, false);
         PizzaViewHolder vh = new PizzaViewHolder(listItem);
         return vh;
     }
@@ -25,8 +24,5 @@ public class PizzaListAdapter extends RecyclerView.Adapter<PizzaViewHolder>
 
     }
     @Override
-    public int getItemCount(){
-        return pizzaDetails.length;
-
 }
 }
